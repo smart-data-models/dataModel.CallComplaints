@@ -1,0 +1,2 @@
+"id_", "type_", "aliasName_", "name_", "surname_", "contactPhone_", "makesComplaints__0_", "makesComplaints__1_", "@context__0_"
+"urn:ngsi-ld:User:01", "CallUser", "85c42919-2f6b-4c61-a40e-1cbf7f5fc337", "John", "Doe", "+306912345678", "urn:ngsi-ld:Complaint:01", "urn:ngsi-ld:Complaint:02", "https://smartdatamodels.org/context.jsonld"
