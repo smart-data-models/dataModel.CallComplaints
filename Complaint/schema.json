@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0.1",
+  "$schemaVersion": "0.0.1",
   "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/Complaint/schema.json",
   "title": "Call Complaints - Complaint",
   "description": "This entity contains a harmonised description of a generic Complaint made for the Call Complaints domain.",
