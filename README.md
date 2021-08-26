@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+# dataModel.CallComplaints
 
-You can use the [editor on GitHub](https://github.com/smart-data-models/dataModel.CallComplaints/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### List of data models
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The following entity types are available:
+- [CallUser](https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/CallUser/README.md). This entity contains a harmonised description of a generic User made for the Call Complaints domain.
 
-### Markdown
+- [Complaint](https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/Complaint/README.md). This entity contains a harmonised description of a generic Complaint made for the Call Complaints domain.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- [ComplaintsCollection](https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsCollection/README.md). This entity contains a harmonised description of a generic Complaints Collection made for the Call Complaints domain.
 
-```markdown
-Syntax highlighted code block
+- [ComplaintsOrganization](https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsOrganization/README.md). This entity contains a harmonised description of a generic Organization made for the Call Complaints domain.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### Contributors
+[Link](https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/CONTRIBUTORS.yaml) to the 2 current contributors of the data models of this Subject.
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/smart-data-models/dataModel.CallComplaints/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Contribution
+You can raise an [issue](https://github.com/smart-data-models/dataModel.CallComplaints/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.CallComplaints/pulls) on existing data models
