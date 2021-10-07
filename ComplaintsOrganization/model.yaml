@@ -287,9 +287,14 @@ ComplaintsOrganization:
       type: string
       x-ngsi:
         type: Property
-    url: {}
+    url:
+      description: 'URL which provides a description of this item'
+      format: uri
+      type: string
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
   type: object
-  version: ""
+  version: 0.0.2
