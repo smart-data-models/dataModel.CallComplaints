@@ -6,7 +6,7 @@ Version: 0.0.2
 This entity contains a harmonised description of a generic Organization made for the Call Complaints domain.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsOrganization/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/ComplaintsOrganization/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsOrganization/doc/spec.md)
 
