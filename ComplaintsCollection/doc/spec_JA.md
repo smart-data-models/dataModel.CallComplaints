@@ -7,7 +7,7 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `groupedAt`: このコレクションが構成する苦情のグループ化の時期。  - `hasCategories`: 文字列の配列。このコレクションに属する苦情のカテゴリ。  - `hasComplaints`: このコレクションに属するコンプライントのID。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。Collectionと同じでなければなりません。    
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `groupedAt`: このコレクションが構成する苦情のグループ化の時期。  - `hasCategories`: 文字列の配列。このコレクションに属する苦情のカテゴリ。  - `hasComplaints`: このコレクションに属するクレームのIDです。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。Collectionと同じでなければなりません。    
 必須項目  
 - `id`  - `type`  ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます  
@@ -333,7 +333,7 @@ ComplaintsCollection:
   "groupedAt": "2021-04-19T10:00:00.000"  
 }  
 ```  
-#### ComplaintsCollection NGSI-v2 正規化例  
+#### ComplaintsCollection NGSI-v2規格化例  
 ここでは、正規化されたJSON-LD形式のComplaintsCollectionの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
@@ -370,7 +370,7 @@ ComplaintsCollection:
 }  
 ```  
 #### ComplaintsCollection NGSI-LD key-values 例  
-ComplaintsCollectionをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+ComplaintsCollectionをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:ComplaintsCollection:01",  
