@@ -312,7 +312,7 @@ CallUser:
 </details>    
 ## Exemples de charges utiles  
 #### CallUser Valeurs-clés NGSI-v2 Exemple  
-Voici un exemple d'un CallUser au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple d'un CallUser au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:User:01",  
