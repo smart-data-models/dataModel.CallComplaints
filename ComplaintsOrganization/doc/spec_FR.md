@@ -339,7 +339,7 @@ ComplaintsOrganization:
 }  
 ```  
 #### ComplaintsOrganization NGSI-v2 normalisée Exemple  
-Voici un exemple de ComplaintsOrganization au format JSON-LD tel que normalisé. Ceci est compatible avec la NGSI-v2 lorsqu'elle n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple de ComplaintsOrganization au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Organization:01",  
