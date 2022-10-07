@@ -23,5 +23,8 @@
     "surname": {
         "type": "Property",
         "value": "Doe"
-    }
+    },
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"
+    ]
 }
