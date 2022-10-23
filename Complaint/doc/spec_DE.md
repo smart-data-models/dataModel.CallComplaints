@@ -1,16 +1,31 @@
-Entität: Beschwerde  
-===================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Beschwerde  
+===================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.CallComplaints/blob/master/Complaint/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer allgemeinen Beschwerde, die für den Bereich Anrufbeschwerden erstellt wurde**.  
-Version:  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen Beschwerde, die für den Bereich Anrufbeschwerden erstellt wurde**.  
+Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Die Kategorie der Beanstandung. Beispiele: Braunes Wasser, Partikel, Geruch/Geschmack, Krankheit, Zählerleck, Netzleck, kein Wasser, niedriger Druck, hoher Druck, defekter Schalter, Wasserqualität, Wasserverschwendung, defekter Zähler, Zählerumstellung, Gehsteigreparatur, Pflasterreparatur.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `isFiledTo`: Die ID der Organisation (z. B. der Beschwerdeabteilung), bei der diese Beschwerde eingereicht wird.  - `isMadeBy`: Die Kennung des Benutzers, der diese Beschwerde eingereicht hat.  - `isPartOf`: Array von Strings (Beziehungen zwischen Entitäten). Die IDs der Sammlungen, zu denen diese Beschwerde gehört.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `status`: Status der Reklamation. Beispiele: Anhängig, In Bearbeitung.  - `timestamp`: Der Zeitstempel der Beschwerde.  - `type`: NGSI Entity Type. Er muss gleich Complaint sein.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Die Kategorie der Beanstandung. Beispiele: Braunes Wasser, Partikel, Geruch/Geschmack, Krankheit, Zählerleck, Netzleck, kein Wasser, niedriger Druck, hoher Druck, defekter Schalter, Wasserqualität, Wasserverschwendung, defekter Zähler, Zählerumstellung, Gehsteigreparatur, Pflasterreparatur.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `isFiledTo[*]`: Die ID der Organisation (z. B. der Beschwerdeabteilung), bei der diese Beschwerde eingereicht wird.  - `isMadeBy[*]`: Die Kennung des Benutzers, der diese Beschwerde eingereicht hat.  - `isPartOf[array]`: Array von Strings (Beziehungen zwischen Entitäten). Die IDs der Sammlungen, zu denen diese Beschwerde gehört.  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `status[string]`: Status der Reklamation. Beispiele: Anhängig, In Bearbeitung.  - `timestamp[string]`: Der Zeitstempel der Beschwerde.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `type[string]`: NGSI Entity Type. Er muss gleich Complaint sein.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `category`  - `id`  - `location`  - `timestamp`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `category`  - `id`  - `location`  - `timestamp`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Complaint:    
@@ -344,12 +359,22 @@ Complaint:
     - timestamp    
     - type    
   type: object    
-  version: ""    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/Complaint/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/Complaint/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### Beanstandung NGSI-v2 Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Beschwerde im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Complaint:01",  
@@ -373,8 +398,10 @@ Complaint:
   }  
 }  
 ```  
+</details>  
 #### Reklamation NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine Beschwerde im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Complaint:01",  
@@ -422,84 +449,99 @@ Complaint:
   }  
 }  
 ```  
+</details>  
 #### Beanstandung NGSI-LD-Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine Beschwerde im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Complaint:01",  
-  "type": "Complaint",  
-  "description": "Pressure of the water that reaches my house is really low to non-existent.",  
-  "status": "Pending",  
-  "timestamp": "2021-04-19T10:00:00.000",  
-  "category": "Low pressure",  
-  "isMadeBy": "urn:ngsi-ld:User:01",  
-  "isPartOf": [  
-    "urn:ngsi-ld:ComplaintsCollection:01",  
-    "urn:ngsi-ld:ComplaintsCollection:02"  
-  ],  
-  "isFiledTo": "urn:ngsi-ld:Organization:01",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
+    "id": "urn:ngsi-ld:Complaint:01",  
+    "type": "Complaint",  
+    "category": "Low pressure",  
+    "description": "Pressure of the water that reaches my house is really low to non-existent.",  
+    "isFiledTo": "urn:ngsi-ld:Organization:01",  
+    "isMadeBy": "urn:ngsi-ld:User:01",  
+    "isPartOf": [  
+        "urn:ngsi-ld:ComplaintsCollection:01",  
+        "urn:ngsi-ld:ComplaintsCollection:02"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
+    },  
+    "status": "Pending",  
+    "timestamp": "2021-04-19T10:00:00.000",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Beanstandung NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine Beschwerde im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Complaint:01",  
-  "type": "Complaint",  
-  "description": {  
-    "type": "Property",  
-    "value": "Pressure of the water that reaches my house is really low to non-existent."  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "Pending"  
-  },  
-  "timestamp": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "value": "2021-04-19T10:00:00.000"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "Low pressure"  
-  },  
-  "isMadeBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:User:01"  
-  },  
-  "isPartOf": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:ComplaintsCollection:01",  
-      "urn:ngsi-ld:ComplaintsCollection:02"  
+    "id": "urn:ngsi-ld:Complaint:01",  
+    "type": "Complaint",  
+    "category": {  
+        "type": "Property",  
+        "value": "Low pressure"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Pressure of the water that reaches my house is really low to non-existent."  
+    },  
+    "isFiledTo": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Organization:01"  
+    },  
+    "isMadeBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:User:01"  
+    },  
+    "isPartOf": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:ComplaintsCollection:01",  
+            "urn:ngsi-ld:ComplaintsCollection:02"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "Pending"  
+    },  
+    "timestamp": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "value": "2021-04-19T10:00:00.000"  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "isFiledTo": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Organization:01"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  }  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
