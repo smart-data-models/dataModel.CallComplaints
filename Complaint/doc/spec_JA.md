@@ -1,16 +1,31 @@
-エンティティ苦情  
-========  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ苦情  
+========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CallComplaints/blob/master/Complaint/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、Call Complaintsドメインで作成された一般的な苦情の調和された記述が含まれています。  
-のバージョンがあります。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、Call Complaints ドメインのために作成された一般的な苦情の調和された記述を含む**。  
+バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: クレームのカテゴリーです。例：茶色い水、粒子、臭い・味、病気、メーター漏れ、ネットワーク漏れ、水が出ない、低圧、高圧、スイッチの故障、水質、水の無駄、メーターの故障、メーターの位置変更、歩道の修理、舗装の修理。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `isFiledTo`: このComplaintが提出された組織（例：Complaints Department）のIDです。  - `isMadeBy`: 苦情を申し立てたユーザーのID。  - `isPartOf`: 文字列の配列（エンティティ間のリレーションシップ）。この苦情の一部であるコレクションのID。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status`: 訴状のステータス。例Pending（保留）、In progress（進行中）。  - `timestamp`: 訴状のタイムスタンプです。  - `type`: NGSI エンティティタイプ。Complaintと等しくなければなりません。    
-必須項目  
-- `category`  - `id`  - `location`  - `timestamp`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: 苦情のカテゴリー。例：茶色い水、粒子、におい・味、病気、メーター漏れ、ネットワーク漏れ、水が出ない、低圧、高圧、スイッチ破損、水質、水の無駄、メーター破損、メーター位置変更、歩道修理、舗装修理。  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `isFiledTo[*]`: 苦情の申出先となる組織（例：苦情対応窓口）のID。  - `isMadeBy[*]`: この苦情を申し立てたユーザーのID。  - `isPartOf[array]`: 文字列の配列 (エンティティ間の関係)。この苦情が含まれるコレクションのID。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `status[string]`: 苦情の状況例保留中、進行中  - `timestamp[string]`: クレームのタイムスタンプ。  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `type[string]`: NGSI エンティティタイプ。Complaintと同じでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `category`  - `id`  - `location`  - `timestamp`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Complaint:    
@@ -344,12 +359,22 @@ Complaint:
     - timestamp    
     - type    
   type: object    
-  version: ""    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/Complaint/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/Complaint/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### 苦情 NGSI-v2 キー・バリューの例  
-JSON-LD形式でkey-valuesとしてComplaintの例を示します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### 苦情 NGSI-v2キー値例  
+以下は、ComplaintをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Complaint:01",  
@@ -373,8 +398,10 @@ Complaint:
   }  
 }  
 ```  
-#### 苦情 NGSI-v2 正規化例  
-ここでは、正規化されたJSON-LD形式のComplaintの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### クレーム NGSI-v2 正規化例  
+以下は、正規化されたJSON-LD形式のComplaintの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Complaint:01",  
@@ -422,84 +449,99 @@ Complaint:
   }  
 }  
 ```  
-#### 苦情 NGSI-LDのキーバリューの例  
-ここでは、JSON-LD形式でkey-valuesとしてComplaintの例を示します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### クレームNGSI-LDキー値例  
+以下は、ComplaintをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Complaint:01",  
-  "type": "Complaint",  
-  "description": "Pressure of the water that reaches my house is really low to non-existent.",  
-  "status": "Pending",  
-  "timestamp": "2021-04-19T10:00:00.000",  
-  "category": "Low pressure",  
-  "isMadeBy": "urn:ngsi-ld:User:01",  
-  "isPartOf": [  
-    "urn:ngsi-ld:ComplaintsCollection:01",  
-    "urn:ngsi-ld:ComplaintsCollection:02"  
-  ],  
-  "isFiledTo": "urn:ngsi-ld:Organization:01",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
+    "id": "urn:ngsi-ld:Complaint:01",  
+    "type": "Complaint",  
+    "category": "Low pressure",  
+    "description": "Pressure of the water that reaches my house is really low to non-existent.",  
+    "isFiledTo": "urn:ngsi-ld:Organization:01",  
+    "isMadeBy": "urn:ngsi-ld:User:01",  
+    "isPartOf": [  
+        "urn:ngsi-ld:ComplaintsCollection:01",  
+        "urn:ngsi-ld:ComplaintsCollection:02"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
+    },  
+    "status": "Pending",  
+    "timestamp": "2021-04-19T10:00:00.000",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-#### 不満 NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のComplaintの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### クレーム NGSI-LD 正規化例  
+以下は、正規化されたJSON-LD形式のComplaintの例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Complaint:01",  
-  "type": "Complaint",  
-  "description": {  
-    "type": "Property",  
-    "value": "Pressure of the water that reaches my house is really low to non-existent."  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "Pending"  
-  },  
-  "timestamp": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "value": "2021-04-19T10:00:00.000"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "Low pressure"  
-  },  
-  "isMadeBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:User:01"  
-  },  
-  "isPartOf": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:ComplaintsCollection:01",  
-      "urn:ngsi-ld:ComplaintsCollection:02"  
+    "id": "urn:ngsi-ld:Complaint:01",  
+    "type": "Complaint",  
+    "category": {  
+        "type": "Property",  
+        "value": "Low pressure"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Pressure of the water that reaches my house is really low to non-existent."  
+    },  
+    "isFiledTo": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Organization:01"  
+    },  
+    "isMadeBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:User:01"  
+    },  
+    "isPartOf": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:ComplaintsCollection:01",  
+            "urn:ngsi-ld:ComplaintsCollection:02"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "Pending"  
+    },  
+    "timestamp": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "value": "2021-04-19T10:00:00.000"  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "isFiledTo": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Organization:01"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  }  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
