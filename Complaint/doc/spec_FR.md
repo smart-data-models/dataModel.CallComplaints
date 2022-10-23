@@ -1,16 +1,31 @@
-Entité : Plainte  
-================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : Plainte  
+================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.CallComplaints/blob/master/Complaint/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée d'une plainte générique déposée dans le domaine des plaintes relatives aux appels**.  
-version :  
+version : 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: La catégorie de la plainte. Exemples : Eau brune, Particules, Odeur / Goût, Maladie, Fuite du compteur, Fuite du réseau, Pas d'eau, Basse pression, Haute pression, Interrupteur cassé, Qualité de l'eau, Gaspillage de l'eau, Compteur cassé, Repositionnement du compteur, Réparation du trottoir, Réparation de la chaussée.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `isFiledTo`: L'identifiant de l'organisation (par exemple, le département des plaintes) à laquelle cette plainte est adressée.  - `isMadeBy`: L'identifiant de l'utilisateur qui a déposé cette plainte.  - `isPartOf`: Tableau de chaînes de caractères (relations entre entités). Les ID des collections dont fait partie cette plainte.  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `status`: Statut de la plainte. Exemples : En attente, En cours.  - `timestamp`: L'horodatage de la plainte.  - `type`: Type d'entité NGSI. Il doit être égal à Complaint.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: La catégorie de la plainte. Exemples : Eau brune, Particules, Odeur / Goût, Maladie, Fuite du compteur, Fuite du réseau, Pas d'eau, Basse pression, Haute pression, Interrupteur cassé, Qualité de l'eau, Gaspillage de l'eau, Compteur cassé, Repositionnement du compteur, Réparation du trottoir, Réparation de la chaussée.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `id[*]`: Identifiant unique de l'entité  - `isFiledTo[*]`: L'identifiant de l'organisation (par exemple, le département des plaintes) à laquelle cette plainte est adressée.  - `isMadeBy[*]`: L'identifiant de l'utilisateur qui a déposé cette plainte.  - `isPartOf[array]`: Tableau de chaînes de caractères (relations entre entités). Les ID des collections dont fait partie cette plainte.  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `status[string]`: Statut de la plainte. Exemples : En attente, En cours.  - `timestamp[string]`: L'horodatage de la plainte.  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `type[string]`: Type d'entité NGSI. Il doit être égal à Complaint.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `category`  - `id`  - `location`  - `timestamp`  - `type`  ## Description des propriétés du modèle de données  
+- `category`  - `id`  - `location`  - `timestamp`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Complaint:    
@@ -344,12 +359,22 @@ Complaint:
     - timestamp    
     - type    
   type: object    
-  version: ""    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/Complaint/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/Complaint/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### Plainte Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de plainte au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Complaint:01",  
@@ -373,8 +398,10 @@ Complaint:
   }  
 }  
 ```  
+</details>  
 #### Plainte NGSI-v2 normalisée Exemple  
 Voici un exemple de plainte au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Complaint:01",  
@@ -422,84 +449,99 @@ Complaint:
   }  
 }  
 ```  
+</details>  
 #### Plainte Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de plainte au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-LD lorsque vous utilisez `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Complaint:01",  
-  "type": "Complaint",  
-  "description": "Pressure of the water that reaches my house is really low to non-existent.",  
-  "status": "Pending",  
-  "timestamp": "2021-04-19T10:00:00.000",  
-  "category": "Low pressure",  
-  "isMadeBy": "urn:ngsi-ld:User:01",  
-  "isPartOf": [  
-    "urn:ngsi-ld:ComplaintsCollection:01",  
-    "urn:ngsi-ld:ComplaintsCollection:02"  
-  ],  
-  "isFiledTo": "urn:ngsi-ld:Organization:01",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
+    "id": "urn:ngsi-ld:Complaint:01",  
+    "type": "Complaint",  
+    "category": "Low pressure",  
+    "description": "Pressure of the water that reaches my house is really low to non-existent.",  
+    "isFiledTo": "urn:ngsi-ld:Organization:01",  
+    "isMadeBy": "urn:ngsi-ld:User:01",  
+    "isPartOf": [  
+        "urn:ngsi-ld:ComplaintsCollection:01",  
+        "urn:ngsi-ld:ComplaintsCollection:02"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
+    },  
+    "status": "Pending",  
+    "timestamp": "2021-04-19T10:00:00.000",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Plainte NGSI-LD normalisée Exemple  
 Voici un exemple de plainte au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Complaint:01",  
-  "type": "Complaint",  
-  "description": {  
-    "type": "Property",  
-    "value": "Pressure of the water that reaches my house is really low to non-existent."  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "Pending"  
-  },  
-  "timestamp": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "value": "2021-04-19T10:00:00.000"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": "Low pressure"  
-  },  
-  "isMadeBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:User:01"  
-  },  
-  "isPartOf": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:ComplaintsCollection:01",  
-      "urn:ngsi-ld:ComplaintsCollection:02"  
+    "id": "urn:ngsi-ld:Complaint:01",  
+    "type": "Complaint",  
+    "category": {  
+        "type": "Property",  
+        "value": "Low pressure"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Pressure of the water that reaches my house is really low to non-existent."  
+    },  
+    "isFiledTo": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:Organization:01"  
+    },  
+    "isMadeBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:User:01"  
+    },  
+    "isPartOf": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:ComplaintsCollection:01",  
+            "urn:ngsi-ld:ComplaintsCollection:02"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "Pending"  
+    },  
+    "timestamp": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "value": "2021-04-19T10:00:00.000"  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "isFiledTo": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:Organization:01"  
-  },  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  }  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
