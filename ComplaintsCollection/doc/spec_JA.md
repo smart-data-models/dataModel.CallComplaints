@@ -1,16 +1,31 @@
-エンティティクレームコレクション  
-================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティComplaintsCollection  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CallComplaints/blob/master/ComplaintsCollection/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティには、Call Complaintsドメインのために作成された一般的なComplaints Collectionの調和された記述が含まれています。  
-のバージョンがあります。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、Call Complaints ドメインのために作成された一般的な苦情収集の調和された記述を含む。  
+バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `groupedAt`: このコレクションが構成する苦情のグループ化の時期。  - `hasCategories`: 文字列の配列。このコレクションに属する苦情のカテゴリー。  - `hasComplaints`: このコレクションに属するコンプライントのID。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。Collectionと同じでなければなりません。    
-必須項目  
-- `id`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `groupedAt[string]`: 本コレクションが構成するクレームのグループ化の時期。  . Model: [https://schema.org/Time](https://schema.org/Time)- `hasCategories[array]`: 文字列の配列。このコレクションに含まれる苦情のカテゴリ。  . Model: [https://schema.org/Text](https://schema.org/Text)- `hasComplaints[array]`: このコレクションに属するクレームのID。  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI-LD エンティティタイプ。Collection と同じでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 ComplaintsCollection:    
@@ -305,12 +320,22 @@ ComplaintsCollection:
     - id    
     - type    
   type: object    
-  version: ""    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsCollection/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/ComplaintsCollection/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### ComplaintsCollection NGSI-v2 key-values Example  
-ComplaintsCollectionをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### ComplaintsCollection NGSI-v2 key-value の例。  
+以下は、ComplaintsCollectionをJSON-LD形式でkey-valueにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ComplaintsCollection:01",  
@@ -333,8 +358,10 @@ ComplaintsCollection:
   "groupedAt": "2021-04-19T10:00:00.000"  
 }  
 ```  
-#### ComplaintsCollection NGSI-v2規格化例  
-ここでは、正規化されたJSON-LD形式のComplaintsCollectionの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ComplaintsCollection NGSI-v2 正規化例  
+以下は、正規化されたJSON-LD形式のComplaintsCollectionの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:ComplaintsCollection:01",  
@@ -369,73 +396,85 @@ ComplaintsCollection:
   }  
 }  
 ```  
-#### ComplaintsCollection NGSI-LD key-values 例  
-ComplaintsCollectionをkey-valuesとしてJSON-LD形式で記述した例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ComplaintsCollection NGSI-LD キー値例  
+以下は、ComplaintsCollectionをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ComplaintsCollection:01",  
-  "type": "ComplaintsCollection",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
+    "id": "urn:ngsi-ld:ComplaintsCollection:01",  
+    "type": "ComplaintsCollection",  
+    "groupedAt": "2021-04-19T10:00:00.000",  
+    "hasCategories": [  
+        "Brown water",  
+        "Low pressure"  
+    ],  
+    "hasComplaints": [  
+        "urn:ngsi-ld:Complaint:01",  
+        "urn:ngsi-ld:Complaint:02"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "hasCategories": [  
-    "Brown water",  
-    "Low pressure"  
-  ],  
-  "hasComplaints": [  
-    "urn:ngsi-ld:Complaint:01",  
-    "urn:ngsi-ld:Complaint:02"  
-  ],  
-  "groupedAt": "2021-04-19T10:00:00.000",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-#### 不満点集 NGSI-LD 正規化例  
-ここでは、正規化されたJSON-LD形式のComplaintsCollectionの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ComplaintsCollection NGSI-LD 正規化例  
+以下は、正規化されたJSON-LD形式のComplaintsCollectionの例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ComplaintsCollection:01",  
-  "type": "ComplaintsCollection",  
-  "location": {  
-    "type": "Geoproperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  },  
-  "hasCategories": {  
-    "type": "Property",  
-    "value": [  
-      "Brown water",  
-      "Low pressure"  
+    "id": "urn:ngsi-ld:ComplaintsCollection:01",  
+    "type": "ComplaintsCollection",  
+    "groupedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2021-04-19T10:00:00.000"  
+        }  
+    },  
+    "hasCategories": {  
+        "type": "Property",  
+        "value": [  
+            "Brown water",  
+            "Low pressure"  
+        ]  
+    },  
+    "hasComplaints": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:Complaint:01",  
+            "urn:ngsi-ld:Complaint:02"  
+        ]  
+    },  
+    "location": {  
+        "type": "Geoproperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
-  },  
-  "hasComplaints": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:Complaint:01",  
-      "urn:ngsi-ld:Complaint:02"  
-    ]  
-  },  
-  "groupedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2021-04-19T10:00:00.000"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
