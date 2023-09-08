@@ -13,10 +13,18 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "availabilityRestriction": "https://smartdatamodels.org/availabilityRestriction",
         "availableLanguage": "https://smartdatamodels.org/availableLanguage",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "category": "https://smartdatamodels.org/dataModel.CallComplaints/category",
         "contactOption": "https://smartdatamodels.org/contactOption",
         "contactPhone": "https://smartdatamodels.org/dataModel.CallComplaints/contactPhone",
         "contactType": "https://smartdatamodels.org/contactType",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
         "dateModified": "https://smartdatamodels.org/dateModified",
