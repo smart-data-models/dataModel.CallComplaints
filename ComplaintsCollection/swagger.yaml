@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     This entity contains a harmonised description of a generic Complaints Collection made for the Call Complaints domain.
   title: ComplaintsCollection
-  version: ""
+  version: "0.0.2"
 openapi: "3.0.0"
 
 paths: 

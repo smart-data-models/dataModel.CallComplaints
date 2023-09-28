@@ -1,42 +1,42 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entidad: Recogida de denuncias  
-==============================<!-- /10-Header -->  
+实体：呼叫用户  
+=======<!-- /10-Header -->  
 <!-- 15-License -->  
-[Licencia abierta](https://github.com/smart-data-models//dataModel.CallComplaints/blob/master/ComplaintsCollection/LICENSE.md)  
-[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.CallComplaints/blob/master/CallUser/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descripción global: **Esta entidad contiene una descripción armonizada de una Recogida de Denuncias genérica realizada para el dominio de Denuncias de Llamadas.**  
-versión: 0.0.2  
+全局描述：**该实体包含对呼叫投诉领域通用用户的统一描述。  
+版本： 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Lista de propiedades  
+## 属性列表  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
-- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: La localidad en la que se encuentra la dirección postal, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, gestiona el gobierno local    
-	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `groupedAt[date-time]`: Momento de agrupación de las denuncias que componen esta Colección  . Model: [https://schema.org/Time](https://schema.org/Time)- `hasCategories[array]`: Matriz de cadenas. Las categorías de las Denuncias que pertenecen a esta Colección  . Model: [https://schema.org/Text](https://schema.org/Text)- `hasComplaints[array]`: Los ID de las reclamaciones que pertenecen a esta colección.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tipo de entidad NGSI-LD. Debe ser igual a Colección  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `aliasName[string]`: 用户的别名，以保护隐私  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPhone[string]`: 用户的联系电话  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `id[*]`: 实体的唯一标识符  - `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `makesComplaints[array]`: 字符串数组（实体之间的关系）。用户投诉的 ID  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `surname[string]`: 用户姓氏  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `type[string]`: NGSI-LD 实体类型。它必须等于 CallUser  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Propiedades requeridas  
+所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción de las propiedades del modelo de datos  
-Ordenados alfabéticamente (pulse para más detalles)  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
-ComplaintsCollection:    
-  description: This entity contains a harmonised description of a generic Complaints Collection made for the Call Complaints domain.    
+CallUser:    
+  description: This entity contains a harmonised description of a generic User made for the Call Complaints domain.    
   properties:    
     address:    
       description: The mailing address    
@@ -91,6 +91,12 @@ ComplaintsCollection:
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
+    aliasName:    
+      description: The alias name of the User to protect privacy    
+      type: string    
+      x-ngsi:    
+        model: ' https://schema.org/Text'    
+        type: Property    
     alternateName:    
       description: An alternative name for this item    
       type: string    
@@ -101,6 +107,12 @@ ComplaintsCollection:
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
+    contactPhone:    
+      description: The contact phone of the User    
+      type: string    
+      x-ngsi:    
+        model: ' https://schema.org/Text'    
         type: Property    
     dataProvider:    
       description: A sequence of characters identifying the provider of the harmonised data entity    
@@ -124,30 +136,6 @@ ComplaintsCollection:
       type: string    
       x-ngsi:    
         type: Property    
-    groupedAt:    
-      description: The time of grouping of the complaints that this Collection consists of    
-      format: date-time    
-      type: string    
-      x-ngsi:    
-        model: https://schema.org/Time    
-        type: Property    
-    hasCategories:    
-      description: Array of Strings. The categories of the Complaints that belong in this Collection    
-      items:    
-        type: string    
-      type: array    
-      x-ngsi:    
-        model: https://schema.org/Text    
-        type: Property    
-    hasComplaints:    
-      description: The IDs of the Complaints that belong in this Collection    
-      items:    
-        format: uri    
-        type: string    
-      type: array    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        type: Relationship    
     id:    
       anyOf:    
         - description: Identifier format of any NGSI entity    
@@ -330,6 +318,14 @@ ComplaintsCollection:
             type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
+    makesComplaints:    
+      description: Array of Strings (relationships between Entities). The IDs of the Complaints that the User made    
+      items:    
+        format: uri    
+        type: string    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     name:    
       description: The name of this item    
       type: string    
@@ -374,10 +370,16 @@ ComplaintsCollection:
       type: string    
       x-ngsi:    
         type: Property    
+    surname:    
+      description: The surname of the User    
+      type: string    
+      x-ngsi:    
+        model: ' https://schema.org/Text'    
+        type: Property    
     type:    
-      description: NGSI-LD Entity Type. It must be equal to Collection    
+      description: NGSI-LD Entity Type. It must be equal to CallUser    
       enum:    
-        - ComplaintsCollection    
+        - CallUser    
       type: string    
       x-ngsi:    
         type: Property    
@@ -387,147 +389,118 @@ ComplaintsCollection:
   type: object    
   x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
-  x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsCollection/LICENSE.md    
-  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/ComplaintsCollection/schema.json    
+  x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/CallUser/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/User/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Ejemplo de carga útil  
-#### ComplaintsCollection NGSI-v2 key-values Ejemplo  
-He aquí un ejemplo de ComplaintsCollection en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+## 有效载荷示例  
+#### CallUser NGSI-v2 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 CallUser 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ComplaintsCollection:01",  
-  "type": "ComplaintsCollection",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
-    ]  
-  },  
-  "hasCategories": [  
-    "Brown water",  
-    "Low pressure"  
-  ],  
-  "hasComplaints": [  
+  "id": "urn:ngsi-ld:User:01",  
+  "type": "CallUser",  
+  "aliasName": "85c42919-2f6b-4c61-a40e-1cbf7f5fc337",  
+  "name": "John",  
+  "surname": "Doe",  
+  "contactPhone": "+306912345678",  
+  "makesComplaints": [  
     "urn:ngsi-ld:Complaint:01",  
     "urn:ngsi-ld:Complaint:02"  
-  ],  
-  "groupedAt": "2021-04-19T10:00:00.000"  
+  ]  
 }  
 ```  
 </details>  
-#### ComplaintsCollection NGSI-v2 normalizado Ejemplo  
-He aquí un ejemplo de ComplaintsCollection en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### CallUser NGSI-v2 标准化示例  
+下面是一个规范化 JSON-LD 格式的 CallUser 示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:ComplaintsCollection:01",  
-  "type": "ComplaintsCollection",  
-  "location": {  
-    "type": "geo:json",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
+  "id": "urn:ngsi-ld:User:01",  
+  "type": "CallUser",  
+  "aliasName": {  
+    "type": "Text",  
+    "value": "85c42919-2f6b-4c61-a40e-1cbf7f5fc337"  
   },  
-  "hasCategories": {  
-    "type": "array",  
-    "value": [  
-      "Brown water",  
-      "Low pressure"  
-    ]  
+  "name": {  
+    "type": "Text",  
+    "value": "John"  
   },  
-  "hasComplaints": {  
+  "surname": {  
+    "type": "Text",  
+    "value": "Doe"  
+  },  
+  "contactPhone": {  
+    "type": "Text",  
+    "value": "+306912345678"  
+  },  
+  "makesComplaints": {  
     "type": "Relationship",  
     "value": [  
       "urn:ngsi-ld:Complaint:01",  
       "urn:ngsi-ld:Complaint:02"  
     ]  
-  },  
-  "groupedAt": {  
-    "type": "DateTime",  
-    "value": "2021-04-19T10:00:00.000"  
   }  
 }  
 ```  
 </details>  
-#### ComplaintsCollection NGSI-LD key-values Ejemplo  
-He aquí un ejemplo de ComplaintsCollection en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### CallUser NGSI-LD 键值示例  
+下面是一个以 JSON-LD 格式作为键值的 CallUser 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ComplaintsCollection:01",  
-    "type": "ComplaintsCollection",  
-    "groupedAt": "2021-04-19T10:00:00.000",  
-    "hasCategories": [  
-        "Brown water",  
-        "Low pressure"  
-    ],  
-    "hasComplaints": [  
+    "id": "urn:ngsi-ld:User:01",  
+    "type": "CallUser",  
+    "aliasName": "85c42919-2f6b-4c61-a40e-1cbf7f5fc337",  
+    "contactPhone": "+306912345678",  
+    "makesComplaints": [  
         "urn:ngsi-ld:Complaint:01",  
         "urn:ngsi-ld:Complaint:02"  
     ],  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            40.3,  
-            25.5  
-        ]  
-    },  
+    "name": "John",  
+    "surname": "Doe",  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
     ]  
 }  
 ```  
 </details>  
-#### ComplaintsCollection NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de ComplaintsCollection en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### CallUser NGSI-LD 标准化示例  
+下面是一个规范化 JSON-LD 格式的 CallUser 示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:ComplaintsCollection:01",  
-    "type": "ComplaintsCollection",  
-    "groupedAt": {  
+    "id": "urn:ngsi-ld:User:01",  
+    "type": "CallUser",  
+    "aliasName": {  
         "type": "Property",  
-        "value": {  
-            "@type": "DateTime",  
-            "@value": "2021-04-19T10:00:00.000"  
-        }  
+        "value": "85c42919-2f6b-4c61-a40e-1cbf7f5fc337"  
     },  
-    "hasCategories": {  
+    "contactPhone": {  
         "type": "Property",  
-        "value": [  
-            "Brown water",  
-            "Low pressure"  
-        ]  
+        "value": "+306912345678"  
     },  
-    "hasComplaints": {  
+    "makesComplaints": {  
         "type": "Relationship",  
         "object": [  
             "urn:ngsi-ld:Complaint:01",  
             "urn:ngsi-ld:Complaint:02"  
         ]  
     },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                40.3,  
-                25.5  
-            ]  
-        }  
+    "name": {  
+        "type": "Property",  
+        "value": "John"  
+    },  
+    "surname": {  
+        "type": "Property",  
+        "value": "Doe"  
     },  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
@@ -538,7 +511,7 @@ ComplaintsCollection:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
