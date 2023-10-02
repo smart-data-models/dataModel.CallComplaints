@@ -1,3 +1,3 @@
-/* (Beta) Export of data model Complaint of the subject dataModel.CallComplaints for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model Complaint of the subject dataModel.CallComplaints for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE Complaint_type AS ENUM ('Complaint');
-CREATE TABLE Complaint (address json, alternateName text, areaServed text, category text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, isFiledTo text, isMadeBy text, isPartOf json, location json, name text, owner json, seeAlso json, source text, status text, timestamp timestamp, type Complaint_type);
+CREATE TABLE Complaint (address JSON, alternateName TEXT, areaServed TEXT, category TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, isPartOf JSON, name TEXT, owner JSON, source TEXT, status TEXT, timestamp TIMESTAMP, type Complaint_type);
