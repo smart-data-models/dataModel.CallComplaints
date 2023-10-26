@@ -1,3 +1,3 @@
 /* (Beta) Export of data model CallUser of the subject dataModel.CallComplaints for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE CallUser_type AS ENUM ('CallUser');
-CREATE TABLE CallUser (address JSON, aliasName TEXT, alternateName TEXT, areaServed TEXT, contactPhone TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, makesComplaints JSON, name TEXT, owner JSON, source TEXT, surname TEXT, type CallUser_type);
+CREATE TABLE CallUser (address JSON, aliasName TEXT, alternateName TEXT, areaServed TEXT, contactPhone TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, makesComplaints JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, surname TEXT, type CallUser_type);
