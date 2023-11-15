@@ -6,7 +6,7 @@
     "value": "Water Board of Lemesos"
   },
   "contactPoint": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "name": "ContactPoint",
@@ -18,7 +18,7 @@
     ]
   },
   "receivesComplaints": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Complaint:01",
       "urn:ngsi-ld:Complaint:02"
