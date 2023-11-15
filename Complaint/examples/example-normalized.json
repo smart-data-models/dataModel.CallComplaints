@@ -18,18 +18,18 @@
     "value": "Low pressure"
   },
   "isMadeBy": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:User:01"
   },
   "isPartOf": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:ComplaintsCollection:01",
       "urn:ngsi-ld:ComplaintsCollection:02"
     ]
   },
   "isFiledTo": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "urn:ngsi-ld:Organization:01"
   },
   "location": {
