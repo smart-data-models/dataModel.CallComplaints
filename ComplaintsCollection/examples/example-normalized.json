@@ -12,14 +12,14 @@
     }
   },
   "hasCategories": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "Brown water",
       "Low pressure"
     ]
   },
   "hasComplaints": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:Complaint:01",
       "urn:ngsi-ld:Complaint:02"
