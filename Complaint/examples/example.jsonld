@@ -1,24 +1,24 @@
 {
-    "id": "urn:ngsi-ld:Complaint:01",
-    "type": "Complaint",
-    "category": "Low pressure",
-    "description": "Pressure of the water that reaches my house is really low to non-existent.",
-    "isFiledTo": "urn:ngsi-ld:Organization:01",
-    "isMadeBy": "urn:ngsi-ld:User:01",
-    "isPartOf": [
-        "urn:ngsi-ld:ComplaintsCollection:01",
-        "urn:ngsi-ld:ComplaintsCollection:02"
-    ],
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            40.3,
-            25.5
-        ]
-    },
-    "status": "Pending",
-    "timestamp": "2021-04-19T10:00:00.000",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"
+  "id": "urn:ngsi-ld:Complaint:01",
+  "type": "Complaint",
+  "category": "Low pressure",
+  "description": "Pressure of the water that reaches my house is really low to non-existent.",
+  "isFiledTo": "urn:ngsi-ld:Organization:01",
+  "isMadeBy": "urn:ngsi-ld:User:01",
+  "isPartOf": [
+    "urn:ngsi-ld:ComplaintsCollection:01",
+    "urn:ngsi-ld:ComplaintsCollection:02"
+  ],
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      40.3,
+      25.5
     ]
+  },
+  "status": "Pending",
+  "timestamp": "2021-04-19T10:00:00.000",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"
+  ]
 }
