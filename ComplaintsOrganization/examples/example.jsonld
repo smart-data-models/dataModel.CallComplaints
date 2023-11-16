@@ -1,21 +1,21 @@
 {
-    "id": "urn:ngsi-ld:Organization:01",
-    "type": "ComplaintsOrganization",
-    "contactPoint": [
-        {
-            "name": "ContactPoint",
-            "telephone": "25830000",
-            "email": "contact@wbl.com.cy",
-            "contactType": "24 hours Customer Service",
-            "url": "https://www.wbl.com.cy/en/page/home"
-        }
-    ],
-    "name": "Water Board of Lemesos",
-    "receivesComplaints": [
-        "urn:ngsi-ld:Complaint:01",
-        "urn:ngsi-ld:Complaint:02"
-    ],
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:Organization:01",
+  "type": "ComplaintsOrganization",
+  "contactPoint": [
+    {
+      "name": "ContactPoint",
+      "telephone": "25830000",
+      "email": "contact@wbl.com.cy",
+      "contactType": "24 hours Customer Service",
+      "url": "https://www.wbl.com.cy/en/page/home"
+    }
+  ],
+  "name": "Water Board of Lemesos",
+  "receivesComplaints": [
+    "urn:ngsi-ld:Complaint:01",
+    "urn:ngsi-ld:Complaint:02"
+  ],
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"
+  ]
 }
