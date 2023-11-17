@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: 私書箱の住所のための私書箱番号。例：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 郵便番号。例：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 番地  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 公道上の特定の物件を特定する番号    
 - `alternateName[string]`: この項目の別名  - `areaServed[string]`: サービスまたは提供品が提供される地理的地域。serviceAreaより優先されます。  - `availabilityRestriction[*]`: このプロパティは、コンタクトポイントと、そのコンタクトポイントが利用できない時間帯に関する情報とをリンクする。詳細は、営業時間指定クラスを使用して提供されます。  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)- `availableLanguage[*]`: そのアイテム、サービス、場所で誰かが使う可能性のある言語。IETF BCP 47標準の言語コードのいずれかを使用してください。Text」オプションが実装されていますが、「Language」でもかまいません。  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)- `contactOption[*]`: このコンタクトポイントで利用可能なオプション（フリーダイヤルや聴覚障害者へのサポートなど）  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)- `contactType[string]`: このアイテムのコンタクトタイプ  - `dataProvider[string]`: ハーモナイズされたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated[date-time]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified[date-time]`: エンティティの最終変更のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: この商品の説明  - `email[idn-email]`: 所有者のEメールアドレス  - `faxNumber[string]`: ファックス番号  . Model: [http://schema.org/Text](http://schema.org/Text)- `id[*]`: エンティティの一意識別子  - `location[*]`: アイテムへの Geojson 参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygon のいずれか。  - `name[string]`: このアイテムの名前  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリスト。  - `productSupported[string]`: このサポートコンタクトポイントが関連する製品またはサービス（特定の製品ラインの製品サポートなど）。これは、特定の製品または製品ライン（例：「iPhone」）または製品やサービスの一般的なカテゴリ（例：「スマートフォン」）とすることができます。  . Model: [http://schema.org/Text](http://schema.org/Text)- `receivesComplaints[array]`: 当団体に寄せられた苦情のID  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: アイテムに関する追加リソースを指すURIのリスト  - `source[string]`: エンティティ・データの元のソースを URL として示す一連の文字。ソース・プロバイダの完全修飾ドメイン名、またはソース・オブジェクトの URL を推奨する。  - `telephone[string]`: 連絡先の電話番号  - `type[string]`: NGSI-LD Entity Type。ComplaintsOrganization と等しくなければならない。  - `url[uri]`: このアイテムの説明を提供するURL  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
@@ -97,56 +98,113 @@ ComplaintsOrganization:
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: The geographic area where a service or offered item is provided. Supersedes serviceArea    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
+        model: https://schema.org/Text    
         type: Property    
-    availabilityRestriction:    
-      anyOf:    
-        - description: Array of identifiers format of any NGSI entity    
-          items:    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-          type: array    
-          x-ngsi:    
-            type: Property    
-        - description: Array of identifiers format of any NGSI entity    
-          items:    
-            format: uri    
-            type: string    
-          type: array    
-          x-ngsi:    
-            type: Property    
-      description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class    
-      x-ngsi:    
-        model: http://schema.org/hoursAvailable    
-        type: Relationship    
-    availableLanguage:    
-      anyOf:    
-        - anyOf:    
-            - type: string    
-            - items:    
+    contactPoint:    
+      description: A list of contacts information    
+      items:    
+        description: All contact elements in data models unless explicitly stated according to schema.org    
+        properties:    
+          contactPoint:    
+            description: The details to contact with the item    
+            properties:    
+              areaServed:    
+                description: The geographic area where a service or offered item is provided. Supersedes serviceArea    
                 type: string    
-              type: array    
-      description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
-      x-ngsi:    
-        model: http://schema.org/availableLanguage    
-        type: Property    
-    contactOption:    
-      anyOf:    
-        - type: string    
-        - items:    
-            type: string    
-          type: array    
-      description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)    
-      x-ngsi:    
-        model: http://schema.org/contactOption    
-        type: Property    
-    contactType:    
-      description: Contact type of this item    
-      type: string    
+                x-ngsi:    
+                  type: Property    
+              availabilityRestriction:    
+                anyOf:    
+                  - description: Array of identifiers format of any NGSI entity    
+                    items:    
+                      maxLength: 256    
+                      minLength: 1    
+                      pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                      type: string    
+                    type: array    
+                    x-ngsi:    
+                      type: Property    
+                  - description: Array of identifiers format of any NGSI entity    
+                    items:    
+                      format: uri    
+                      type: string    
+                    type: array    
+                    x-ngsi:    
+                      type: Property    
+                description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class    
+                x-ngsi:    
+                  model: http://schema.org/hoursAvailable    
+                  type: Relationship    
+              availableLanguage:    
+                anyOf:    
+                  - anyOf:    
+                      - type: string    
+                      - items:    
+                        type: array    
+                description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+                x-ngsi:    
+                  model: http://schema.org/availableLanguage    
+                  type: Property    
+              contactOption:    
+                anyOf:    
+                  - type: string    
+                  - items:    
+                      type: string    
+                    type: array    
+                description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)    
+                x-ngsi:    
+                  model: http://schema.org/contactOption    
+                  type: Property    
+              contactType:    
+                description: Contact type of this item    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              email:    
+                description: Email address of owner    
+                format: idn-email    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              faxNumber:    
+                description: The fax number    
+                type: string    
+                x-ngsi:    
+                  model: http://schema.org/Text    
+                  type: Property    
+              name:    
+                description: The name of this item    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              productSupported:    
+                description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')    
+                type: string    
+                x-ngsi:    
+                  model: http://schema.org/Text    
+                  type: Property    
+              telephone:    
+                description: Telephone of this contact    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              url:    
+                description: URL which provides a description or further information about this item    
+                format: uri    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+            type: object    
+            x-ngsi:    
+              model: https://schema.org/ContactPoint    
+              type: Property    
+        type: object    
+        x-ngsi:    
+          type: Property    
+      type: array    
       x-ngsi:    
         type: Property    
     dataProvider:    
@@ -170,18 +228,6 @@ ComplaintsOrganization:
       description: A description of this item    
       type: string    
       x-ngsi:    
-        type: Property    
-    email:    
-      description: Email address of owner    
-      format: idn-email    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    faxNumber:    
-      description: The fax number    
-      type: string    
-      x-ngsi:    
-        model: http://schema.org/Text    
         type: Property    
     id:    
       anyOf:    
@@ -392,12 +438,6 @@ ComplaintsOrganization:
       type: array    
       x-ngsi:    
         type: Property    
-    productSupported:    
-      description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')    
-      type: string    
-      x-ngsi:    
-        model: http://schema.org/Text    
-        type: Property    
     receivesComplaints:    
       description: The Ids of the Complaints that this Organization receives    
       items:    
@@ -424,21 +464,10 @@ ComplaintsOrganization:
       type: string    
       x-ngsi:    
         type: Property    
-    telephone:    
-      description: Telephone of this contact    
-      type: string    
-      x-ngsi:    
-        type: Property    
     type:    
       description: NGSI-LD Entity Type. It must be equal to ComplaintsOrganization    
       enum:    
         - ComplaintsOrganization    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    url:    
-      description: URL which provides a description of this item    
-      format: uri    
       type: string    
       x-ngsi:    
         type: Property    
@@ -447,11 +476,11 @@ ComplaintsOrganization:
     - type    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CallComplaints/blob/master/ComplaintsOrganization/LICENSE.md    
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/Organization/schema.json    
   x-model-tags: ""    
-  x-version: 0.0.2    
+  x-version: 0.2.0    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -471,8 +500,8 @@ ComplaintsOrganization:
     {  
       "name": "ContactPoint",  
       "telephone": "25830000",  
-	  "email": "contact@wbl.com.cy",  
-        "url": "https://www.wbl.com.cy/en/page/home",  
+      "email": "contact@wbl.com.cy",  
+      "url": "https://www.wbl.com.cy/en/page/home",  
       "contactType": "24 hours Customer Service"  
     }  
   ],  
@@ -495,7 +524,7 @@ ComplaintsOrganization:
     "value": "Water Board of Lemesos"  
   },  
   "contactPoint": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       {  
         "name": "ContactPoint",  
@@ -507,7 +536,7 @@ ComplaintsOrganization:
     ]  
   },  
   "receivesComplaints": {  
-    "type": "Relationship",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:Complaint:01",  
       "urn:ngsi-ld:Complaint:02"  
@@ -521,25 +550,25 @@ ComplaintsOrganization:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Organization:01",  
-    "type": "ComplaintsOrganization",  
-    "contactPoint": [  
-        {  
-            "name": "ContactPoint",  
-            "telephone": "25830000",  
-            "email": "contact@wbl.com.cy",  
-            "contactType": "24 hours Customer Service",  
-            "url": "https://www.wbl.com.cy/en/page/home"  
-        }  
-    ],  
-    "name": "Water Board of Lemesos",  
-    "receivesComplaints": [  
-        "urn:ngsi-ld:Complaint:01",  
-        "urn:ngsi-ld:Complaint:02"  
-    ],  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:Organization:01",  
+  "type": "ComplaintsOrganization",  
+  "contactPoint": [  
+    {  
+      "name": "ContactPoint",  
+      "telephone": "25830000",  
+      "email": "contact@wbl.com.cy",  
+      "contactType": "24 hours Customer Service",  
+      "url": "https://www.wbl.com.cy/en/page/home"  
+    }  
+  ],  
+  "name": "Water Board of Lemesos",  
+  "receivesComplaints": [  
+    "urn:ngsi-ld:Complaint:01",  
+    "urn:ngsi-ld:Complaint:02"  
+  ],  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
