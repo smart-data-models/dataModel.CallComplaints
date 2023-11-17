@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema/Organization",
-  "$schemaVersion": "0.1.0",
+  "$schemaVersion": "0.2.0",
   "modelTags": "",
   "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.CallComplaints/master/Organization/schema.json",
   "title": "Call Complaints - Complaints Organization",
@@ -14,10 +14,14 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
-    },
-    {
       "properties": {
+        "contactPoint": {
+          "type": "array",
+          "description": "Property. A list of contacts information",
+          "items": {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons"
+          }
+        },
         "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to ComplaintsOrganization",
