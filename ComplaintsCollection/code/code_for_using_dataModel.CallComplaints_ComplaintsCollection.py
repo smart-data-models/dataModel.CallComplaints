@@ -24,25 +24,30 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "ComplaintsCollection"
 subject = "dataModel.CallComplaints"
-groupedAt = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2021-04-19T10:00:00.000'}}"
+groupedAt = "2021-04-19T10:00:00.000"
 attribute = "groupedAt"
 value = groupedAt
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasCategories = {'type': 'Property', 'value': ['Brown water', 'Low pressure']}
+hasCategories = ['Brown water', 'Low pressure']
 attribute = "hasCategories"
 value = hasCategories
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasComplaints = {'type': 'Relationship', 'object': ['urn:ngsi-ld:Complaint:01', 'urn:ngsi-ld:Complaint:02']}
+hasComplaints = ['urn:ngsi-ld:Complaint:01', 'urn:ngsi-ld:Complaint:02']
 attribute = "hasComplaints"
 value = hasComplaints
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
