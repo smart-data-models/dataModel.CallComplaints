@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "CallUser"
 subject = "dataModel.CallComplaints"
-aliasName = "{'type': 'Property', 'value': '85c42919-2f6b-4c61-a40e-1cbf7f5fc337'}"
+aliasName = "85c42919-2f6b-4c61-a40e-1cbf7f5fc337"
 attribute = "aliasName"
 value = aliasName
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-contactPhone = "{'type': 'Property', 'value': '+306912345678'}"
+contactPhone = "+306912345678"
 attribute = "contactPhone"
 value = contactPhone
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-makesComplaints = {'type': 'Relationship', 'object': ['urn:ngsi-ld:Complaint:01', 'urn:ngsi-ld:Complaint:02']}
+makesComplaints = ['urn:ngsi-ld:Complaint:01', 'urn:ngsi-ld:Complaint:02']
 attribute = "makesComplaints"
 value = makesComplaints
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-surname = "{'type': 'Property', 'value': 'Doe'}"
+surname = "Doe"
 attribute = "surname"
 value = surname
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
