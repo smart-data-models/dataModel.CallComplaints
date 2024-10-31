@@ -15,15 +15,16 @@
         "availableLanguage": "https://smartdatamodels.org/availableLanguage",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "category": "https://smartdatamodels.org/dataModel.CallComplaints/category",
         "contactOption": "https://smartdatamodels.org/contactOption",
         "contactPhone": "https://smartdatamodels.org/dataModel.CallComplaints/contactPhone",
+        "contactPoint": "https://smartdatamodels.org/contactPoint",
         "contactType": "https://smartdatamodels.org/contactType",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
@@ -39,7 +40,7 @@
         "isFiledTo": "https://smartdatamodels.org/dataModel.CallComplaints/isFiledTo",
         "isMadeBy": "https://smartdatamodels.org/dataModel.CallComplaints/isMadeBy",
         "isPartOf": "https://smartdatamodels.org/dataModel.CallComplaints/isPartOf",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "makesComplaints": "https://smartdatamodels.org/dataModel.CallComplaints/makesComplaints",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
@@ -50,7 +51,7 @@
         "receivesComplaints": "https://smartdatamodels.org/dataModel.CallComplaints/receivesComplaints",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "surname": "https://smartdatamodels.org/dataModel.CallComplaints/surname",
