@@ -1,3 +1,20 @@
 /* (Beta) Export of data model ComplaintsOrganization of the subject dataModel.CallComplaints for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE ComplaintsOrganization_type AS ENUM ('ComplaintsOrganization');
-CREATE TABLE ComplaintsOrganization (address JSON, alternateName TEXT, areaServed TEXT, contactPoint JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, receivesComplaints JSON, seeAlso JSON, source TEXT, type ComplaintsOrganization_type);
+CREATE TABLE ComplaintsOrganization (
+  "address" JSON,
+  "alternateName" TEXT,
+  "areaServed" TEXT,
+  "contactPoint" JSON,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "id" TEXT PRIMARY KEY,
+  "location" JSON,
+  "name" TEXT,
+  "owner" JSON,
+  "receivesComplaints" JSON,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "type" ComplaintsOrganization_type
+);
